@@ -9,15 +9,16 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
+@Document(collection = "fami_home")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "fami_home")
 public class FamiHome {
     @Id
     @Field("id_fami_home")
     private String id;
+
     @Field("nombre_hogar")
     private String nombreHogar;
     @Field("direccion")
@@ -36,6 +37,9 @@ public class FamiHome {
     private String centroZonal;
     @Field("municipio")
     private String municipio;
+
+    @Field("activo")
+    private Boolean activo; // <- Hogar activo o no
 
     @Field("madre_comunitaria")
     private MadreComunitaria madreComunitaria;
@@ -69,5 +73,8 @@ public class FamiHome {
         private String codigoCuentameUds;
         @Field("numero_contrato")
         private String numeroContrato;
+
+        @Field("activo")
+        private Boolean activo; // <- Madre activa o desvinculada
     }
 }

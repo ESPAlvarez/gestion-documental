@@ -22,6 +22,10 @@ public class UserFami {
     @Id
     /** The unique identifier for the user. */
     private String id;
+    @Field("id_hogar_fami")
+    /** The unique identifier for the household associated with the user. */
+    private String idHogarFami;
+
     @Field("tipo_usuario")
     /** The type of user (e.g., administrator, beneficiary). */
     private String tipoUsuario;
