@@ -1,4 +1,4 @@
-package com.proyecto.fami.gestion_documental.application.dto;
+package com.proyecto.fami.gestion_documental.application.dto.famihome;
 
 import lombok.Data;
 
